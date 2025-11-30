@@ -1,0 +1,53 @@
+body {
+font-family: Arial, sans-serif;
+background-color: #f4f4f4;
+margin: 0;
+padding: 20px;
+}
+.container {
+max-width: 800px;
+margin: 0 auto;
+background-color: #fff;
+padding: 20px;
+box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+h1 {
+text-align: center;
+color: #333;
+}
+h2 {
+color: #00539C;
+
+border-bottom: 2px solid #00539C;
+padding-bottom: 5px;
+}
+label {
+font-weight: bold;
+}
+input[type="text"], input[type="number"], input[type="date"] {
+width: calc(100% - 20px);
+padding: 10px;
+margin: 10px 0;
+border: 1px solid #ccc;
+border-radius: 5px;
+}
+button {
+padding: 10px 15px;
+background-color: #00539C;
+color: #fff;
+border: none;
+cursor: pointer;
+border-radius: 5px;
+}
+button:hover {
+background-color: #003C6C;
+}
+p {
+font-size: 16px;
+line-height: 1.5;
+color: #555;
+margin: 10px 0;
+}
+#math-object, #string-object, #array-object, #date-object {
+margin-bottom: 20px;
+}

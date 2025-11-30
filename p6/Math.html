@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>JavaScript Object Methods with Dynamic Input</title>
+<!--<link rel="stylesheet" href="styles.css">-->
+</head>
+<body>
+<div class="container">
+<h1>JavaScript Object Methods with Dynamic Input</h1>
+<!--
+	NOTE (errors found):
+	- This HTML uses different element IDs and function names than the script located in `project 6/project 6.1/script.js`.
+		* The math section here uses `id="math-input"` while the script expects `id="number"` in the other Math.html.
+		* Buttons call `calculateMath()` here which may not exist in the script file being loaded (or vice versa).
+	- If you open the console you may see errors like: "Uncaught ReferenceError: calculateMath is not defined" or
+		"Cannot read properties of null (reading 'value')" when IDs don't match.
+	Recommended fixes: keep IDs consistent across HTML files and ensure the script you include defines the functions the buttons call.
+-->
+<!-- Math Object Section -->
+<div id="math-object">
+<h2>Math Object Methods</h2>
+<label for="math-input">Enter a number for Math operations: </label>
+<input type="number" id="math-input">
+<button onclick="calculateMath()">Calculate</button>
+<p id="math-output"></p>
+</div>
+<!-- String Object Section -->
+<div id="string-object">
+<h2>String Object Methods</h2>
+<label for="string-input">Enter a string: </label>
+<input type="text" id="string-input">
+<button onclick="manipulateString()">Process String</button>
+<p id="string-output"></p>
+</div>
+
+<!-- Array Object Section -->
+<div id="array-object">
+<h2>Array Object Methods</h2>
+<label for="array-input">Enter comma-separated numbers: </label>
+<input type="text" id="array-input">
+<button onclick="manipulateArray()">Process Array</button>
+<p id="array-output"></p>
+</div>
+<!-- Date Object Section -->
+<div id="date-object">
+<h2>Date Object Methods</h2>
+<label for="date-input">Pick a date: </label>
+<input type="date" id="date-input">
+<button onclick="processDate()">Process Date</button>
+<p id="date-output"></p>
+</div>
+</div>
+<script src="script.js"></script>
+</body>
+</html>
