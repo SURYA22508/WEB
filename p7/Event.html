@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>JavaScript Event Handling Examples</title>
+<!--<link rel="stylesheet" href="styles.css">-->
+</head>
+<body>
+<div class="container">
+<h1>JavaScript Event Handling</h1>
+<div id="form-validation">
+<h2>a. Validate Registration Form</h2>
+<form id="registrationForm" onsubmit="return validateForm()">
+<label for="name">Name:</label>
+<input type="text" id="name" placeholder="Enter your name">
+<label for="email">Email:</label>
+<input type="email" id="email" placeholder="Enter your email">
+<label for="password">Password:</label>
+<input type="password" id="password" placeholder="Enter your password">
+<button type="submit">Register</button>
+<p id="form-output"></p>
+</form>
+</div>
+<div id="open-window">
+<h2>b. Open a New Window</h2>
+<button onclick="openNewTab()">Open New Window</button>
+</div>
+<div id="change-bg">
+<h2>c. Change Background Color</h2>
+<button onclick="toggleBackgroundColor()">Change Background Color</button>
+</div>
+<div id="calendar-display">
+<h2>d. Display Calendar</h2>
+<label for="year">Year:</label>
+<input type="number" id="year" min="1900" max="2100" value="2024">
+<label for="month">Month:</label>
+<select id="month">
+<option value="0">January</option>
+<option value="1">February</option>
+<option value="2">March</option>
+<option value="3">April</option>
+<option value="4">May</option>
+<option value="5">June</option>
+<option value="6">July</option>
+<option value="7">August</option>
+<option value="8">September</option>
+<option value="9">October</option>
+<option value="10">November</option>
+<option value="11">Decemberm</option>
+</select>
+<button onclick="displayCalendar()">Show Calendar</button>
+<div id="calendar-output"></div>
+</div>
+<div id="mouseover-event">
+<h2>e. Mouse Over Event</h2>
+<div id="hover-box" onmouseover="changeHoverBoxColor()" onmouseout="resetHoverBoxColor()">
+Hover over me!
+</div>
+</div>
+</div>
+<script src= script.js></script>
+</body>
+</html>
