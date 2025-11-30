@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body
+        {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 20px;
+        }
+        input,button 
+        {
+            padding: 10px;
+            margin: 10px;
+            font-size: 16px;
+
+        }
+        .result{
+            margin-top: 20px;
+            font-weight: bold;
+
+        }
+
+    </style>
+</head>
+<body>
+    <h1>Number Operations</h1>
+    <input type="number" id="number" name="number" placeholder="Enter a number."><br>
+    <button onclick="fact()">Factorial</button>
+    <button onclick="fibo()">Fibonacci</button>
+    <button onclick="prime()">Prime</button>
+    <button onclick="pali()">Palindrome</button>
+    <div id="result"></div>
+
+    <script>
+        //let output=document.getElementById("result")
+        function fact()
+        {
+            const num=parseInt(document.getElementById("number").value);
+            let f=1;
+            for(let i=1;i<=num;i++)
+            {
+               f=f*i; 
+            }
+            document.getElementById("result").innerText=`Let ${num} factorial is ${f}.`;
+        }
+        function fibo()
+        {
+            const num=parseInt(document.getElementById("number").value);
+            let f=[0,1];
+            for(let i=2;i<=num;i++)
+            {
+               f[i]=f[i-1]+f[i-2]; 
+            }
+            document.getElementById("result").innerText=`Let ${num} fibonacci is ${f.join(',')}.`;
+        }
+        function prime()
+        {
+            const num=parseInt(document.getElementById("number").value);
+            let f=[];
+            for(let i=2;i<=num;i++)
+            {
+               if(isPrime(i))
+                {
+                    f.push(i);
+                }
+            }
+            document.getElementById("result").innerText=`Let ${num} primes is ${f.join(',')}.`;
+        }
+
+        function isPrime(a)
+        {
+            for(let i=2;i<=Math.sqrt(a);i++)
+            {
+                if(a%i===0){ return false; }
+            }
+            return true;
+        }
+
+
+        function pali()
+        {
+            const num=document.getElementById("number").value;
+            let mun=num.split("").reverse().join("");
+            let mes='Not palindrome';
+            if(num===mun)
+        {
+            mes='palindrome'
+        }
+            document.getElementById("result").innerText=`Let ${num} is ${mes}.`;
+        }        
+
+    </script>
+</body>
+</html>
